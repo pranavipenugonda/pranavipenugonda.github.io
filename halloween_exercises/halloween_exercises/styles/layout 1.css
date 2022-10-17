@@ -1,0 +1,198 @@
+/*Changing font and adding background image*/
+html{
+    font-family:  sans-serif;
+    background-image: url(../images/bats.gif);
+    }
+/* main*/
+.main{
+    width: 960px;
+    height: 700px;
+    background-color: white;
+    margin: 20px;
+    margin: 0 auto;
+    border: black;
+    border-style: solid;
+    box-shadow: 5px 10px 18px black;
+}
+/*For letter W*/
+span {
+    float: left;
+    font-size: 2em;
+    line-height: 0.40;
+}
+
+.header{
+    width: 960px;
+    border-top: none;
+}
+
+/* shadow properties*/
+.header{
+    border-bottom: 2px solid black;
+    box-shadow: none;		
+    background-image: linear-gradient(to right,  white, orange, black);
+}
+
+/* For footer*/
+.down{
+    width: 960px;
+    bottom: 10px;
+    height: 50px;
+}
+/*pumpkin image*/
+.logo{
+    width: 70px;
+    margin: 10px;
+}
+
+.logo{
+    float: left;
+    padding-right: 25px;
+}
+
+/*first heading*/
+.text1 {
+    margin-top: auto;
+    padding-top: 10px;
+    }
+.text2{
+    margin-top: -20px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* top nav*/
+
+ul[class="header1"] li {
+    float: left;
+    width:192px;
+    height:40px;
+}
+
+ul[class="header1"] li {
+    background-color: black;
+    backface-visibility: hidden;
+    line-height: 40px;
+    text-align: center;
+}
+
+.highlight{
+    color:orange !important;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.header1 li a:hover{
+    background-color: grey;  
+}
+
+.header1 li ul li a:hover{
+    background-color: none;
+    opacity: 100%;
+}   
+
+ul li ul li{
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+}
+
+/* shadow properties*/
+.down{
+    position: absolute;
+    border-bottom: none;
+    border-top: 2px solid black;
+    box-shadow: none;
+    background-image: linear-gradient(to left,  white, orange, black);
+}
+
+/* bottom nav*/
+ul[class="navv"]{
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+ul[class="navv"] li {
+    width:180px;
+    height:40px;
+    background-color: orange;
+    line-height: 40px;
+    text-align: center;
+    margin: 5px;
+    border: 3px solid black;
+}
+
+#box1{
+    display:table;
+}
+
+#navlist>div{
+    display:table-cell
+}
+
+#box1{
+    width:940px;
+    height: 550px;
+    top:0px;
+    left:0px;
+}
+
+#navsize{
+    width:250px;
+}
+
+#box2{
+    width:-900px;
+    height: -20px;
+}
+
+.text3{
+    margin-top: -10px;
+}
+.big{
+    padding-top: 5px;
+}
+
+.catt{
+    color: orange;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.catt a {
+    color:orange;
+}
+
+#box2{
+    margin-left: 20px;
+    padding: 5px;
+}
+/* nav shadow properties*/
+ul[class="navv"] li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+  
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.catt :hover{
+    color: green;
+}
+
+footer{
+    text-align: center;
+    line-height: 45px;
+}
