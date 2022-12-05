@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Opensea-details</title>
+		<link rel="stylesheet" href="nftstyles2.css" />
+	</head>
+	<body>
+		<header>
+			<div class="navigation">
+				<a class="logo" href="nft2.html">
+					<img
+						class="logo__img"
+						src="https://opensea.io/static/images/logos/opensea.svg"
+						alt=""
+					/>
+					<span class="logo__text">Opensea</span>
+				</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="about.html">About Us</a>
+				<!-- <script src="detailsstyles.js"></script> -->
+			</div>
+			<div>
+				<input
+					id="searchBar"
+					type="text"
+					placeholder="Search items, collections...."
+				/>
+				<button>Search</button>
+			</div>
+		</header>
+		<main id="detailsMain">
+			<div class="detailsLeft">
+				<img id="nftImage" src="" alt="nftImage" />
+			</div>
+			<div class="detailsRight">
+				<p id="title">S7NS STATION</p>
+				<p id="nftName"></p>
+				<p>OwnedBy <span>56745</span></p>
+				<strong class="cardNumber"># 2172</strong>
+
+				<div id="propsContainer">
+					<h2>Properties</h2>
+					<div id="props"></div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p></p>
+				Made with ♥️ by
+				<a href="https://www.linkedin.com/in/pranavi-penugonda/"
+					>Pranavi Penugonda</a
+				>
+			</p>
+		</footer>
+		<script>
+			
+			let nftInfo = JSON.parse(localStorage.getItem("objectToPass"));
+			console.log(nftInfo, "nftInfo");
+
+			let nftImage = document.getElementById("nftImage");
+			let nftName = document.getElementById("nftName");
+			nftImage.src = `https://s7nspfp.mypinata.cloud/ipfs/` + nftInfo.image;
+			nftName.innerHTML = nftInfo.name;
+			let props = document.getElementById("props");
+
+			for (let i = 0; i < nftInfo.attributes.length; i++) {
+				console.log(nftInfo.attributes[i], "here");
+				let property = document.createElement("div");
+				property.className = "property";
+
+				let propertyName = document.createElement("p");
+				propertyName.className = "propertyName";
+				propertyName.innerHTML = nftInfo.attributes[i].trait_type;
+				property.appendChild(propertyName);
+
+				let propertyValue = document.createElement("p");
+				propertyValue.className = "propertyValue";
+				propertyValue.innerHTML = nftInfo.attributes[i].value;
+				property.appendChild(propertyValue);
+
+				props.appendChild(property);
+			}
+	
+		</script>
+
+		
+	</body>
+</html>
